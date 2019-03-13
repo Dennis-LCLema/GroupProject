@@ -1,0 +1,49 @@
+
+
+.wrapper {
+  width: 1600px;
+}
+
+h3 {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.event_rest_row {
+    width: 1400px;
+    margin-left: 50px;
+}
+
+.event_card_cont {
+    float: left; 
+    width: 330px;
+    margin-left: 20px;
+}
+
+.card {
+    padding: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.event_card {
+    width: 300px;
+}
+
+.rest_card_cont {
+    float: left;
+    margin-left: 20px; 
+    width: 680px;
+}
+
+.rest_card {
+    float: left;
+    width: 300px;
+}
+
+#enjoy_night {
+  width: 1600px;
+}
+
+
+
