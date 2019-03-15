@@ -42,6 +42,16 @@ function seatGeek(){
         console.log("This is the link to the Event: " + linkToEvent);
         console.log("This is the zip code: " + zip)
     
+        $.ajax({
+            url: "https://developers.zomato.com/api/v2.1/search?q=" + zip + "&apikey=72838eb63aa133056155ed7f659182a9",
+            method: "GET"
+        }).then(function(response) {
+            console.log("restaurants test " + zip);
+            console.log(response);
+        });
+        
+        
+        
         // This creates the Event card, 3 restaurant links will be displayed belowed.
         var newEvent = $("<div class='card'>").append(
             $("<h5>").text(eventTitle),
@@ -54,6 +64,8 @@ function seatGeek(){
         
         $(".event_rest_row").append(newEvent)
         }
+
+
 
 })
 
