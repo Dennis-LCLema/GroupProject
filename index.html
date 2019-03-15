@@ -7,73 +7,93 @@
       crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
-  <body>
+  
+<body>
         
+    <div class="wrapper">
     
-    <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4">Dinner & a Show</h1>
-                  <p class="lead">Welcome to Dinner & a Show - plan your night out!</p>
-                </div>
-        </div>
-        <div class ="container">
-            <input class="form-control" type="text" placeholder="When are you going out?">
-        </div>
-        <br/>
-    
- 
-  <div class="wrapper">
+        <div id="top_stuff">
 
-    <div class="event_rest_row">
-        
-        <div class="event_card_cont">
-
-            <h3>Events on that date </h3>  
-
-            <div class="card">
-                <div class="event_card">
-                    <h5 class="eventName">Event Name</h5>
-                    <p class="eventDescr">Event Description Pulled from API</p>
-                    <p>Address?</p>   
-                    <a href="#" class="eventLink">Link to event registration/ticket purchases</a>
-                    <br/>
-                    <br/>
-                    <h6 class="card-subtitle mb-2 text-muted">You should check it out!</h6>
-                </div>    
+            <div id="logo_box">
+                <img src= "assets/images/eventide_logo.png" alt="Eventide Logo">   
             </div>
 
-        </div>
+            <div id="text_and_inputs">
+                <h2><strong>Welcome to Eventide - plan your night out!</strong></h2>
+                <br/>
+                <p id="blurb">Enter the city and date for your outing, and we'll give you the day's events and restaurants nearby.</p>
+        
+                <div id="selections_row">
+    
+                    <input id="citypicker" type="text" placeholder=" Select the city">
+            
+                    <input id="datepicker" type="text" placeholder=" Select the date">
 
-        <div class="rest_card_cont"> 
-
-            <h3>Restaurants nearby</h3>
-         
-            <div class="card">
-                <div class="rest_card">
-                    <h5 class="restName">Restaurant Name</h5> 
-                    <p class="cuisineName">Restaurant cuisine from API</p> 
-                    <p>Address?</p>   
-                    <a href="#" class="restLink">Link to reservations or restaurant website</a>
-                    <br/>
-                    <br/>
-                    <h6 class="card-subtitle mb-2 text-muted">Grab a bite to eat here before or after!</h6>
-                    <br/>
-         
                 </div>
+
             </div>
+        
+
+        </div>
+     
+
+    
+        <div id="results_box">
+
+            <div id="event_rest_headings">
+                <div id="event_head"><h3>Events</h3></div>
+                <div id="rest_head"><h3>Restaurants nearby</h3></div>
+            </div>
+
+            <div class="event_rest_row">
+        
+                <div class="event_card_cont">
+
+                    <div class="card">
+                        <div class="event_card">
+                            <h5 class="eventName">Event Name</h5>
+                            <p class="eventDescr">Event Description Pulled from API</p>
+                            <p>Address?</p>   
+                            <a href="#" class="eventLink">Link to event registration/ticket purchases</a>
+                            <br/>
+                            <br/>
+                            <h6 class="card-subtitle mb-2 text-muted">You should check it out!</h6>
+                        </div>    
+                    </div>
+                </div>
+            
+    
+
+                <div class="rest_cards_cont"> 
          
-            <div class="card">
-                <div class="rest_card">
-                <h5 class="restName">Restaurant Name</h5>
-                <p class="cuisineName">Restaurant cuisine from API</p>
-                <p>Address?</p>    
-                <a href="#" class="restLink">Link to reservations or restaurant website</a>
-                <br/>
-                <br/>
-                <h6 class="card-subtitle mb-2 text-muted">Grab a bite to eat here before or after!</h6>
-                <br/>
+                    <div class="card">
+                        <div class="rest_card">
+                            <h5 class="restName">Restaurant Name</h5> 
+                            <p class="cuisineName">Restaurant cuisine from API</p> 
+                            <p>Address?</p>   
+                            <a href="#" class="restLink">Link to reservations or restaurant website</a>
+                            <br/>
+                            <br/>
+                            <h6 class="card-subtitle mb-2 text-muted">Grab a bite to eat here!</h6>
+                        </div>
+                    </div>
+                
+            
+         
+                    <div class="card">
+                        <div class="rest_card">
+                            <h5 class="restName">Restaurant Name</h5>
+                            <p class="cuisineName">Restaurant cuisine from API</p>
+                            <p>Address?</p>    
+                            <a href="#" class="restLink">Link to reservations or restaurant website</a>
+                            <br/>
+                            <br/>
+                            <h6 class="card-subtitle mb-2 text-muted">Grab a bite to eat here!</h6>
+                        </div>
+                    </div>
          
                 </div>
+                
             </div>
 
         </div>         
@@ -84,14 +104,12 @@
 
     
 
-  </wrapper>
-
     
         
     
     
     
-    </body>
+</body>
 
 
 
