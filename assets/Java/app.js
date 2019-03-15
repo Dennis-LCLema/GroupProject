@@ -48,8 +48,8 @@ function seatGeek(){
             $("<p>").text(eventVenue),
             $("<p>").text(eventAddress),
             $("<p>").text(eventCityAndZip),
-            $("<a id='eventLink'>Click here to buy tickets!</a>"),
-            $("#eventLink").attr("href", linkToEvent)
+            $("<p><a href="+linkToEvent+">Click here to buy tickets!</a></p>")
+        
         )
         
         $(".event_rest_row").append(newEvent)
