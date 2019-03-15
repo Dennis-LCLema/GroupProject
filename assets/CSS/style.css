@@ -1,7 +1,60 @@
 
 
 .wrapper {
-  width: 1600px;
+    width: 1600px;   
+}
+  
+
+#top_stuff {
+    width: 1600px; 
+    height: 360px;
+    background-color: #4286f4;  
+}
+
+#logo_box {
+    float: left;
+    height: 350;
+    width: 350;
+    padding: 30px;
+    margin-left: 75px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+#text_and_inputs {
+    float: left;
+    margin-top: 80px;
+    margin-left: 40px;
+    width: 800px;
+    font-size: 30px;
+    color: #1a345e;
+}
+
+#blurb {
+    font-size: 18px;
+}
+
+
+#selections_row {
+    float: left;
+    margin-top: 40px;
+    width: 800px;
+}
+
+
+#citypicker {
+    width: 200px;
+    font-size: 14px;
+}
+
+
+#datepicker {
+    margin-left: 20px;
+    width: 200px;
+    font-size: 14px;
 }
 
 h3 {
@@ -9,9 +62,32 @@ h3 {
     margin-top: 10px;
 }
 
+
+#results_box {
+    margin-top: 15px;
+    width: 1600px;
+}
+
+#event_rest_headings {
+    width: 1500px;
+}
+
+#event_head {
+    float: left;
+    width: 330px;
+    margin-left: 105px;
+}
+
+#rest_head {
+    float: left;
+    width: 680px;
+}
+
+
 .event_rest_row {
-    width: 1400px;
-    margin-left: 50px;
+    float: left;
+    width: 1300px;
+    margin-left: 75px;
 }
 
 .event_card_cont {
