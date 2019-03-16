@@ -1,4 +1,3 @@
 # GroupProject
 
-See if things changed.
-
+# About this project
