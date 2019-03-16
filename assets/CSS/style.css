@@ -1,7 +1,92 @@
 
 
 .wrapper {
-  width: 1600px;
+    max-width: 100%;   
+}
+  
+
+#top_stuff {
+
+    background-color: #4286f4;
+    padding: 20px;
+}
+
+#logo_box {
+    float: left;
+    width: 350px;
+    padding: 30px;
+    
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+#text_and_inputs {
+    font-size: 30px;
+    color: white;
+    padding: 40px;
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+
+#blurb {
+    font-size: 18px;
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+#selections_row {
+    margin-top: 40px;
+}
+
+.field-head {
+    font-size: 24px;
+}
+
+#enter-city {
+    float: left;
+    display: inline-block;
+}
+
+#enter-date {
+    float: left;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+
+
+#citypicker {
+    width: 200px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+#datepicker {
+    width: 200px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.btn {
+    border: solid 2px white;
+    background-color: #264078; 
+    position: fixed 0;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 54px;
 }
 
 h3 {
@@ -9,41 +94,70 @@ h3 {
     margin-top: 10px;
 }
 
-.event_rest_row {
-    width: 1400px;
-    margin-left: 50px;
+#event-display{
+    margin: 0 auto;
 }
 
-.event_card_cont {
-    float: left; 
-    width: 330px;
-    margin-left: 20px;
-}
 
-.card {
+.event-div {
     padding: 10px;
-    margin-left: 10px;
+    margin: 40px;
     float: left;
+    width: 25%;
+    border: grey solid 3px;
+    text-align: center;
+    /* background-color: gray */
 }
 
-.event_card {
-    width: 300px;
+h5{
+    margin: 10px;
 }
 
-.rest_card_cont {
-    float: left;
-    margin-left: 20px; 
-    width: 680px;
+#event-image{
+    align-content: center
+
 }
 
-.rest_card {
-    float: left;
-    width: 300px;
-}
 
-#enjoy_night {
-  width: 1600px;
-}
+/* mobile display - 640px and less */
 
+@media only screen and (max-width: 640px) {
+
+    .container {
+        width: 640px;
+    }
+
+    #top_stuff {
+        width: 640px; 
+        height: 360px;
+        background-color: #4286f4;  
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+
+    #logo_box {
+        float: left;
+        padding: 0px;
+        height: 250;
+        width: 250;
+        margin-left: 5px;
+    }
+    
+    img {
+        height: 250px;
+        width: 250px;
+    }
+
+    #text_and_inputs {
+        float: left;
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 300px;
+        font-size: 30px;
+        color: #1a345e;
+    }
+    
 
 
