@@ -5,6 +5,7 @@
     <title>Group Project 1 - Dinner & a Show App</title> 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous">
+      <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   
@@ -19,20 +20,32 @@
             </div>
 
             <div id="text_and_inputs">
-                <h2><strong>Welcome to Eventide - plan your night out!</strong></h2>
+                <h1><str</ong>Welcome to Eventide</strong></h1>
+                <h2>Plan your outing!</h2>
                 <br/>
                 <p id="blurb">Enter the city and date for your outing, and we'll give you the day's events and restaurants nearby.</p>
-        
                 <div id="selections_row">
-    
-                    <input id="citypicker" type="text" placeholder="Input your city">
-            
-                    <input id="datepicker" type="text" placeholder="Input your date, using the MM/DD/YY format">
 
+                    <span id="enter-city">
+                    <p class="field-head">City</p>
+                    <input id="citypicker" type="text" placeholder=" E.g., Minneapolis">
+                    </span>
+            
+                    <span id="enter-date">
+                    <p class="field-head">Date</p>
+                    <input id="datepicker" type="text" placeholder=" MM/DD/YY">
+                    </span>
+
+                    
+                    <span><input class="btn btn-primary" type="submit" value="Submit"></span>
+                
                 </div>
                 
             </div>
         </div>
+
+
+
         <div id="event-display">
 
         </div>    
@@ -46,7 +59,6 @@
         
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script type="text/javascript" src="assets/Java/app.js"></script>
     
 </body>
