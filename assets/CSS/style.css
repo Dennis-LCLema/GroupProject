@@ -1,21 +1,16 @@
-
-
 .wrapper {
     max-width: 100%;   
 }
   
 
 #top_stuff {
-    height: 360px;
     background-color: #4286f4;
-      
 }
 
 #logo_box {
     float: left;
     width: 350px;
     padding: 30px;
-    
 }
 
 img {
@@ -27,6 +22,41 @@ img {
     font-size: 30px;
     color: white;
     padding: 40px;
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+
+#blurb {
+    font-size: 18px;
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+#selections_row {
+    /* margin-top: 40px; */
+}
+
+.field-head {
+    font-size: 24px;
+}
+
+#enter-city {
+    float: left;
+}
+
+#enter-date {
+    float: left;
+    margin-left: 20px;
+    
 }
 
 #blurb {
@@ -42,10 +72,23 @@ img {
 #citypicker {
     width: 200px;
     font-size: 14px;
+    display: inline-block;
 }
 
 
 #datepicker {
+    width: 200px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.btn {
+    border: solid 2px white;
+    background-color: #264078; 
+    position: fixed 0;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 54px;
     margin-left: 20px;
     width: 200px;
     font-size: 14px;
@@ -81,5 +124,46 @@ h5{
 }
 
 
+/* mobile display - 640px and less */
 
+@media only screen and (max-width: 640px) {
+
+    .container {
+        width: 640px;
+    }
+
+    #top_stuff {
+        width: 640px; 
+        height: 360px;
+        background-color: #4286f4;  
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+
+    #logo_box {
+        float: left;
+        padding: 0px;
+        height: 250;
+        width: 250;
+        margin-left: 5px;
+    }
+    
+    img {
+        height: 250px;
+        width: 250px;
+    }
+
+    #text_and_inputs {
+        float: left;
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 300px;
+        font-size: 30px;
+        color: #1a345e;
+    }
+    
+
+}
 
