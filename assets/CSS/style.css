@@ -1,22 +1,21 @@
 
 
 .wrapper {
-    width: 1600px;   
+    max-width: 100%;   
 }
   
 
 #top_stuff {
-    width: 1600px; 
     height: 360px;
-    background-color: #4286f4;  
+    background-color: #4286f4;
+      
 }
 
 #logo_box {
     float: left;
-    height: 350;
-    width: 350;
+    width: 350px;
     padding: 30px;
-    margin-left: 75px;
+    
 }
 
 img {
@@ -25,12 +24,9 @@ img {
 }
 
 #text_and_inputs {
-    float: left;
-    margin-top: 80px;
-    margin-left: 40px;
-    width: 800px;
     font-size: 30px;
-    color: #1a345e;
+    color: white;
+    padding: 40px;
 }
 
 #blurb {
@@ -39,9 +35,7 @@ img {
 
 
 #selections_row {
-    float: left;
     margin-top: 40px;
-    width: 800px;
 }
 
 
@@ -62,64 +56,30 @@ h3 {
     margin-top: 10px;
 }
 
-
-#results_box {
-    margin-top: 15px;
-    width: 1600px;
-}
-
-#event_rest_headings {
-    width: 1500px;
-}
-
-#event_head {
-    float: left;
-    width: 330px;
-    margin-left: 105px;
-}
-
-#rest_head {
-    float: left;
-    width: 680px;
+#event-display{
+    margin: 0 auto;
 }
 
 
-.event_rest_row {
-    float: left;
-    width: 1300px;
-    margin-left: 75px;
-}
-
-.event_card_cont {
-    float: left; 
-    width: 330px;
-    margin-left: 20px;
-}
-
-.card {
+.event-div {
     padding: 10px;
-    margin-left: 10px;
+    margin: 40px;
     float: left;
+    width: 25%;
+    border: grey solid 3px;
+    text-align: center;
+    /* background-color: gray */
 }
 
-.event_card {
-    width: 300px;
+h5{
+    margin: 10px;
 }
 
-.rest_card_cont {
-    float: left;
-    margin-left: 20px; 
-    width: 680px;
+#event-image{
+    align-content: center
+
 }
 
-.rest_card {
-    float: left;
-    width: 300px;
-}
-
-#enjoy_night {
-  width: 1600px;
-}
 
 
 
