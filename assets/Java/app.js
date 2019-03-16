@@ -68,21 +68,24 @@ function getRestaurant(input){
             console.log(restName);
             console.log(restCuisine)
             
-            var restDiv = $("<div>").append(
-                $("<h5>").text(restName),
-                $("<p>").text(restCuisine)
-            )
+            // var restDiv = $("<div>").append(
+            //     $("<h5>").text(restName),
+            //     $("<p>").text(restCuisine)
+            // )
 
-            $("#event-info").append(restDiv);
+            // $("#event-info").append(restDiv);
             }
         })}
         
 function clickRestButton(){
         event.preventDefault();
         var restZip = $(this).attr("zip-code");
+        var eventNumber = $(this).attr("id")
+        console.log(eventNumber)
         console.log("Is this working? " + restZip);
         console.log("You clicked me!");
         getRestaurant(restZip);
+
         }
 
 seatGeek();
