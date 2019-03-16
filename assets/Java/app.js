@@ -1,13 +1,7 @@
-
-function getInput(){
-    // This is designed to get the input from the user. We will need get the inputs from the HTML. 
-    
-}
-
 function seatGeek(){
     // $("#gifs-display").empty(); We made need this later to clear out the results available. 
-    var date =  "2019-03-23T00:00:00" //$("#datepicker").val().trim();
-    var city = "Chicago" //$("#citypicker").val().trim();
+    var date =  "2019-03-18T00:00:00" //$("#datepicker").val().trim();
+    var city = "Minneapolis" //$("#citypicker").val().trim();
     var queryURL = "https://api.seatgeek.com/2/events?datetime_utc=" + date + "&venue.city=" + city + "&client_id=MTU3MzU4MzB8MTU1MjQzODQ4My41Ng";
 
     $.ajax({
@@ -42,7 +36,7 @@ function seatGeek(){
         console.log("This is the zip code: " + zip)
         
         // This creates the Event card, 3 restaurant links will be displayed belowed.
-        var newEvent = $("<div class='event-div' id='event-info'>").append(
+        var newEvent = $("<div class='event-div' id='event-info"+i+"'>").append(
             $(eventImage),
             $("<h5 style='text-decoration:underline;'>").text(eventTitle),
             $("<p>").text(eventVenue),
@@ -54,52 +48,45 @@ function seatGeek(){
         )
 
         // Adds the events into the Event Display
-        $("#event-display").append(newEvent)
-        var appendDiv = ("<div id="+zip+"></div>");
-        $("#event-display").append(appendDiv);
-        
-        // Grabs restaurant API
-        function displayRest(){
-            var restZip = $(this).attr("zip-code");
-            console.log("Is this working? " + restZip);
-            $.ajax({
-                url: "https://developers.zomato.com/api/v2.1/search?q=" + restZip + "&apikey=72838eb63aa133056155ed7f659182a9",
-                method: "GET"
-            }).then(function(response) {
-                var restaurantResults = response.restaurants;
-                console.log(restaurantResults);
-                for (var j = 0; j < 3; j++){
-                    // Creates Restaurant Variables
-                    var restName = restaurantResults[j].restaurant.name;
-                    var restCuisine = restaurantResults[j].restaurant.cuisines;
-                    
-                    // Console logs restaurant varialbes
-                    console.log(restName);
-                    console.log(restCuisine)
-                    
-                    var restDiv = $("<div class='rest-div'>").append(
-                        $("<h5>").text(restName),
-                        $("<p>").text(restCuisine)
-                    )
-    
-                    $(appendDiv).text(restDiv);
-                    console.log("What is the " + appendDiv)
-                    }
-                })
+        $("#event-display").append(newEvent)}})}
+
+// Grabs restaurant API
+function getRestaurant(input){
+    restZip = input
+    $.ajax({
+        url: "https://developers.zomato.com/api/v2.1/search?q=" + restZip + "&apikey=72838eb63aa133056155ed7f659182a9",
+        method: "GET"
+    }).then(function(response) {
+        var restResults = response.restaurants;
+        console.log(restResults);
+        for (var j = 0; j < 3; j++){
+            // Creates Restaurant Variables
+            var restName = restResults[j].restaurant.name;
+            var restCuisine = restResults[j].restaurant.cuisines;
+            
+            // Console logs restaurant variables
+            console.log(restName);
+            console.log(restCuisine)
+            
+            var restDiv = $("<div>").append(
+                $("<h5>").text(restName),
+                $("<p>").text(restCuisine)
+            )
+
+            $("#event-info"+).append(restDiv);
             }
+        })}
         
-        $("#rest-button").on("click", displayRest)
+function clickRestButton(){
+        event.preventDefault();
+        var restZip = $(this).attr("zip-code");
+        console.log("Is this working? " + restZip);
+        console.log("You clicked me!");
+        getRestaurant(restZip);
         }
-    })
-};
-        
-
-        
-        
-       
-
 
 seatGeek();
 
+$(document).on("click", "#rest-button", clickRestButton)
 
 // $(document).on("click", "#submit", seatGeek); We made need this later to input results into the function
