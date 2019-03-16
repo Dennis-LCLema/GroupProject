@@ -73,7 +73,7 @@ function getRestaurant(input){
                 $("<p>").text(restCuisine)
             )
 
-            $("#event-info"+).append(restDiv);
+            $("#event-info").append(restDiv);
             }
         })}
         
