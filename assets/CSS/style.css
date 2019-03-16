@@ -6,9 +6,15 @@
   
 
 #top_stuff {
+<<<<<<< HEAD
 
     background-color: #4286f4;
     padding: 20px;
+=======
+    height: 360px;
+    background-color: #4286f4;
+      
+>>>>>>> 5c4dc951ec0ca3d420896d36853f5eda68ca98a8
 }
 
 #logo_box {
@@ -27,6 +33,7 @@ img {
     font-size: 30px;
     color: white;
     padding: 40px;
+<<<<<<< HEAD
     font-family: 'GlacialIndifferenceRegular';
     font-weight: normal;
     font-style: normal;
@@ -66,15 +73,32 @@ h1 {
 }
 
 
+=======
+}
+
+#blurb {
+    font-size: 18px;
+}
+
+
+#selections_row {
+    margin-top: 40px;
+}
+
+>>>>>>> 5c4dc951ec0ca3d420896d36853f5eda68ca98a8
 
 #citypicker {
     width: 200px;
     font-size: 14px;
+<<<<<<< HEAD
     display: inline-block;
+=======
+>>>>>>> 5c4dc951ec0ca3d420896d36853f5eda68ca98a8
 }
 
 
 #datepicker {
+<<<<<<< HEAD
     width: 200px;
     font-size: 14px;
     display: inline-block;
@@ -87,6 +111,11 @@ h1 {
     display: inline-block;
     margin-left: 20px;
     margin-top: 54px;
+=======
+    margin-left: 20px;
+    width: 200px;
+    font-size: 14px;
+>>>>>>> 5c4dc951ec0ca3d420896d36853f5eda68ca98a8
 }
 
 h3 {
@@ -159,5 +188,6 @@ h5{
         color: #1a345e;
     }
     
+
 
 
