@@ -1,7 +1,8 @@
 function seatGeek(){
     // $("#gifs-display").empty(); We made need this later to clear out the results available. 
-    var date =  "2019-03-18T00:00:00" //$("#datepicker").val().trim();
-    var city = "Minneapolis" //$("#citypicker").val().trim();
+    var date =  $("#datepicker").val().trim();
+    var city =  $("#citypicker").val().trim();
+    console.log("This is the user's date input: "+ date)
     var queryURL = "https://api.seatgeek.com/2/events?datetime_utc=" + date + "&venue.city=" + city + "&client_id=MTU3MzU4MzB8MTU1MjQzODQ4My41Ng";
 
     $.ajax({
@@ -72,7 +73,7 @@ function getRestaurant(input, zip){
             console.log(restName);
             console.log(restCuisine);
             
-            var restDiv = $("<div class='rest-div' style='border-bottom: 2px gray solid;'>").append(
+            var restDiv = $("<div class='rest-div' style='border-bottom: 2px gray solid;' id='"[j]"'>").append(
                 $("<h5>").text(restName),
                 $("<p>").text("Cusine: " + restCuisine),
                 $("<p><a href="+restLink+">Click here check it out!</a></p>"),
