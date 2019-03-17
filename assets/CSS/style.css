@@ -1,22 +1,21 @@
-.wrapper {
-    max-width: 100%;   
-}
-  
-
-#top_stuff {
+.container{
+    max-width: 100%;
     background-color: #4286f4;
 }
 
-#logo_box {
+#header {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#logo {
     float: left;
     width: 350px;
     padding: 30px;
-}
-
-img {
     height: 300px;
     width: 300px;
 }
+
 
 #text_and_inputs {
     font-size: 30px;
@@ -40,23 +39,8 @@ h1 {
 }
 
 
-
-#selections_row {
-    /* margin-top: 40px; */
-}
-
 .field-head {
     font-size: 24px;
-}
-
-#enter-city {
-    float: left;
-}
-
-#enter-date {
-    float: left;
-    margin-left: 20px;
-    
 }
 
 #blurb {
@@ -70,28 +54,28 @@ h1 {
 
 
 #citypicker {
-    width: 200px;
+    width: 300px;
     font-size: 14px;
-    display: inline-block;
+    margin-top: 20px;
+    
 }
 
 
 #datepicker {
-    width: 200px;
+    width: 300px;
     font-size: 14px;
-    display: inline-block;
+    margin-top: 20px;
 }
 
 .btn {
     border: solid 2px white;
     background-color: #264078; 
-    position: fixed 0;
-    display: inline-block;
-    margin-left: 20px;
-    margin-top: 54px;
-    margin-left: 20px;
     width: 200px;
     font-size: 14px;
+}
+
+#submit{
+    margin-top:20px;
 }
 
 h3 {
@@ -101,6 +85,7 @@ h3 {
 
 #event-display{
     margin: 0 auto;
+    width:960px;
 }
 
 
@@ -110,6 +95,7 @@ h3 {
     float: left;
     width: 25%;
     border: grey solid 3px;
+    border-radius: 25px;
     text-align: center;
     /* background-color: gray */
 }
@@ -119,22 +105,35 @@ h5{
 }
 
 #event-image{
-    align-content: center
-
+    align-content: center;
+    width:80%;
 }
 
+.rest-div{
+    border-bottom:2px solid lightgray;
+}
 
+#rest-2{
+  border-bottom:none;
+  
+}
+
+#data-validation{
+    display:none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+}
 /* mobile display - 640px and less */
 
 @media only screen and (max-width: 640px) {
 
     .container {
-        width: 640px;
+        width: 100%;
     }
 
-    #top_stuff {
-        width: 640px; 
-        height: 360px;
+    #header {
+        width: 100%; 
         background-color: #4286f4;  
     }
     
@@ -142,28 +141,25 @@ h5{
         font-size: 30px;
     }
 
-    #logo_box {
-        float: left;
-        padding: 0px;
-        height: 250;
-        width: 250;
-        margin-left: 5px;
+    #text_and_inputs {
+        width: 100%;
+        font-size: 30px;
+        clear: both;
     }
     
-    img {
-        height: 250px;
-        width: 250px;
+    #logo_box {
+        margin: 0 auto;
+        float: none;
+    }
+    
+    #logo {
+       width:60%;
     }
 
-    #text_and_inputs {
-        float: left;
-        margin-top: 50px;
-        margin-left: 20px;
-        width: 300px;
-        font-size: 30px;
-        color: #1a345e;
+    .event-div{
+        width: 400px;
+        margin: 0 auto;
     }
-    
 
 }
 

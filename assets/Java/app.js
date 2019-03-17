@@ -1,7 +1,19 @@
-function seatGeek(){
-    // $("#gifs-display").empty(); We made need this later to clear out the results available. 
-    var dateInput =  "03/23/2019"//$("#datepicker").val().trim();
-    var city =  "Minneapolis"//$("#citypicker").val().trim();
+function seatGeek(event){
+    event.preventDefault(); 
+    $("#event-display").html("")
+    
+    var dateInput =  $("#datepicker").val().trim();
+    var city =  $("#citypicker").val().trim();
+
+    // This is our data validation!
+    if(dateInput != "" && city !=""){
+        $("#data-validation").css("display", "none")
+    } else{
+        $("#data-validation").css("display", "inline");
+        $("#warning").css("background-color", "red").css("border-radius", "25px")
+    }
+
+    // Converts this input to a format readable by the Seat Geek API!
     var date = moment(dateInput).format("YYYYMMDD") + "T00:00:00"
     console.log("This is the user's date input: "+ date)
     var queryURL = "https://api.seatgeek.com/2/events?datetime_utc=" + date + "&venue.city=" + city + "&client_id=MTU3MzU4MzB8MTU1MjQzODQ4My41Ng";
@@ -17,6 +29,7 @@ function seatGeek(){
         console.log(results);
         console.log(results.events)
 
+        // For loop for the events
         for (var i = 0; i < results.events.length; i++) {
         
         // Creates variables containing event information
@@ -44,7 +57,7 @@ function seatGeek(){
             $("<p>").text(eventVenue),
             $("<p>").text(eventAddress),
             $("<p>").text(eventCityAndZip),
-            $("<p><a href="+linkToEvent+">Click here to buy tickets!</a></p>"),
+            $("<p><a href='"+linkToEvent+"' target='_blank'>Click here to buy tickets!</a></p>"),
             $("<button type='button' class='btn btn-secondary rest-button' event-number='"+[i]+"' zip-code=" + zip + ">See Nearby Restaurants</button>"),
             $("<div id='"+[i]+"'>")
             
@@ -52,6 +65,10 @@ function seatGeek(){
 
         // Adds the events into the Event Display
         $("#event-display").append(newEvent)
+
+        // Clears the inputs
+        $("#datepicker").val("")
+        $("#citypicker").val("")
     }})}
 
 // Grabs restaurant API
@@ -68,16 +85,16 @@ function getRestaurant(input, zip){
             var restName = restResults[j].restaurant.name;
             var restCuisine = restResults[j].restaurant.cuisines;
             var restLink = restResults[j].restaurant.url;
-            var restAddress = restResults[j].restaurant.location.address
+            var restAddress = restResults[j].restaurant.location.address;
             
             // Console logs restaurant variables
             console.log(restName);
             console.log(restCuisine);
             
-            var restDiv = $("<div class='rest-div' style='border-bottom: 2px gray solid;' id='"+[j]+"'>").append(
+            var restDiv = $("<div class='rest-div' id='rest-"+[j]+"'>").append(
                 $("<h5>").text(restName),
                 $("<p>").text("Cusine: " + restCuisine),
-                $("<p><a href="+restLink+">Click here check it out!</a></p>"),
+                $("<p><a href='"+restLink+"' target='_blank'>Click here check it out!</a></p>"),
                 $("<p>").text(restAddress)
             )
             $("#"+input).append(restDiv)
@@ -105,9 +122,7 @@ function restClear(){
     $(".btn-danger").css("display", "none")
 }
 
-seatGeek();
-
+// seatGeek();
+$(document).on("click", "#submit", seatGeek);
 $(document).on("click", ".rest-button", clickRestButton)
 $(document).on("click", ".btn-danger", restClear)
-
-// $(document).on("click", "#submit", seatGeek); We made need this later to input results into the function
