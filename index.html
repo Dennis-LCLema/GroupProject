@@ -14,6 +14,7 @@
   
 <body>   
     <div class="container">
+        
         <div id="header">
 
             <div id="logo_box">
@@ -40,18 +41,47 @@
                        
             </div>
         </div>
-
+        
         <div id="event-display">
 
         </div>    
-        
-        <!-- INPUT THE COMMENTS SECTION HERE -->
-        
+
+    </div> 
+
+    <div class="comment">
+        <div id="comment-form">
+            <form>
+                <div class="form-group" id="input-form">
+                    <p>Like the app! Send us some feedback. Read below to see what others have said!</p>
+                    <label id="name-comment">Name:</label>
+                    <input id="Username" type="text" class="form-control" placeholder="Input your Name">
+                    <label id="comment-label">Feedback:</label>
+                    <input id="tComment" type="text" class="form-control" placeholder="Give us some love!">
+                    <button class="btn btn-primary" type="submit" id="commentsubmit" value="Submit">Submit!</button>
+                    <div id="data-validation2" style="background-color:red;">
+                            <h5 id="warning2">Hmm...something is not quite right. Be sure to input both your name and your feedback!</h5>
+                        </div>
+                </div>
+            </form>
+        </div>
+        <table class="table" id="comment-table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Feedback</th>
+                </tr>
+            </thead>
+            <tbody id="comment-display">
+
+            </tbody>
+        </table>
     </div>
-     
-      
-    <!-- JQuery Library Link -->
+    
+
+    <!-- JQuery Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase Link -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <!-- Java File Link -->
     <script type="text/javascript" src="assets/Java/app.js"></script>
     <!-- Moment Link -->
