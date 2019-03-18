@@ -51,7 +51,7 @@ database.ref().on("child_added", function(childSnapshot){
 // Inputs name and comment into the database.
 $(document).on("click", "#commentsubmit", commentInput)
 
-// SeatGeek function
+//SeatGeek function
 function seatGeek(event){
     event.preventDefault(); 
     $("#event-display").html("")
@@ -66,6 +66,15 @@ function seatGeek(event){
         $("#data-validation").css("display", "inline");
         $("#warning").css("background-color", "red").css("border-radius", "25px")
     }
+
+    //Check to make sure the date is today or later
+    if(moment(dateInput).isBefore(moment().subtract(1, 'days'))){
+        $("#data-validation3").css("display", "inline");
+        $("#warning3").css("background-color", "red").css("border-radius", "25px")
+    } else{
+        $("#data-validation3").css("display", "none")
+    }
+   
 
     // Converts this input to a format readable by the Seat Geek API!
     var date = moment(dateInput).format("YYYYMMDD") + "T00:00:00"
@@ -195,3 +204,7 @@ function restClear(){
 $(document).on("click", "#submit", seatGeek);
 $(document).on("click", ".rest-button", clickRestButton)
 $(document).on("click", ".btn-danger", restClear)
+
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );

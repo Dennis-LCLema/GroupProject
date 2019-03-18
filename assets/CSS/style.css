@@ -131,6 +131,13 @@ h5{
     border-radius: 25px;
 }
 
+#data-validation3{
+    display: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+}
+
 
 .comment{
     /* position: fixed; */
@@ -208,18 +215,19 @@ th{
         clear: both;
     }
     
-    #logo_box {
+    /* #logo_box {
         margin: 0 auto;
         float: none;
     }
     
     #logo {
        width:60%;
-    }
+    } */
 
     .event-div{
         width: 400px;
-        margin: 0 auto;
+        margin: 10px auto;
+        clear: both;
     }
 
 }

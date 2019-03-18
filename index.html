@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Eventide!</title> 
+    <title>Eventide!</title>
     <!-- Link to Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Link to new font library that we have not used in class -->
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css" />
     <!-- Link to asset library -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  </head>
-  
-<body>   
+    <!-- Calendar Style Sheet -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head>
+
+<body>
     <div class="container">
-        
+
         <div id="header">
 
             <div id="logo_box">
-                <img src= "assets/images/eventide_logo.png" alt="Eventide Logo" id="logo">   
+                <img src="assets/images/eventide_logo.png" alt="Eventide Logo" id="logo">
             </div>
 
             <div id="text_and_inputs">
                 <h1><strong>Welcome to Eventide</strong></h1>
-                <h2>Plan your outing!</h2>
-                <p id="blurb">Enter the city and date for your outing, and we'll give you the day's events and restaurants nearby.</p>
+                <h2>An app to plan your outing!</h2>
+                <!-- <p id="blurb">Enter the city and date for your outing, and we'll give you the day's events and restaurants nearby.</p> -->
                 <div id="selections_row">
                     <form>
                         <div class="form-group" id="input-form">
-                            <label for="inputLocationAndDate">Input the city you're in and the date you'd like to go out!</label>
-                            <input type="text" class="form-control" id="citypicker" placeholder="E.g., Minneapolis">
-                            <input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YYYY">
+                            <label for="inputLocationAndDate">Enter city and date, we'll show you nearby events and restaurants.</label>
+                            <input type="text" class="form-control" id="citypicker" placeholder="City">
+                            <input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YY">
                             <button class="btn btn-primary" type="submit" id="submit" value="Submit">Submit!</button>
                         </div>
                     </form>
@@ -38,15 +41,17 @@
                 <div id="data-validation" style="background-color:red;">
                     <h5 id="warning">Hmm...something is not quite right. Input both a city and a date in the MM/DD/YYYY format!</h5>
                 </div>
-                       
+                <div id="data-validation3" style="background-color:red;">
+                    <h5 id="warning3">Hmm...something is not quite right. Input valid date!</h5>
+                </div>
             </div>
         </div>
-        
+
         <div id="event-display">
 
-        </div>    
+        </div>
 
-    </div> 
+    </div>
 
     <div class="comment">
         <div id="comment-form">
@@ -54,13 +59,13 @@
                 <div class="form-group" id="input-form">
                     <p>Like the app! Send us some feedback. Read below to see what others have said!</p>
                     <label id="name-comment">Name:</label>
-                    <input id="Username" type="text" class="form-control" placeholder="Input your Name">
+                    <input id="Username" type="text" class="form-control" placeholder="Input Name">
                     <label id="comment-label">Feedback:</label>
                     <input id="tComment" type="text" class="form-control" placeholder="Give us some love!">
                     <button class="btn btn-primary" type="submit" id="commentsubmit" value="Submit">Submit!</button>
                     <div id="data-validation2" style="background-color:red;">
-                            <h5 id="warning2">Hmm...something is not quite right. Be sure to input both your name and your feedback!</h5>
-                        </div>
+                        <h5 id="warning2">Hmm...something is not quite right. Be sure to input both your name and your feedback!</h5>
+                    </div>
                 </div>
             </form>
         </div>
@@ -72,11 +77,10 @@
                 </tr>
             </thead>
             <tbody id="comment-display">
-
             </tbody>
         </table>
     </div>
-    
+
 
     <!-- JQuery Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -86,7 +90,8 @@
     <script type="text/javascript" src="assets/Java/app.js"></script>
     <!-- Moment Link -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    
+    <!-- Calendar Link -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 
 
