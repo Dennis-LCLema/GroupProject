@@ -96,16 +96,23 @@ h3 {
     border: grey solid 3px;
     border-radius: 25px;
     text-align: center;
-    /* background-color: gray */
+    /* background-color: gray; */
+    box-shadow: 10px 15px 66px;
+}
+
+input{
+border-radius: 12px;
+box-shadow: 5px 10px 30px;
 }
 
 h5{
     margin: 10px;
 }
 
-#event-image{
+#event-image {
     align-content: center;
-    width:80%;
+    width: 80%;
+    border-radius: 12px;
 }
 
 .rest-div{
@@ -192,6 +199,7 @@ th{
     padding:5px;
 }
 
+
 /* mobile display - 640px and less */
 
 @media only screen and (max-width: 640px) {
@@ -231,4 +239,5 @@ th{
     }
 
 }
+
 
