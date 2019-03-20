@@ -1,13 +1,16 @@
-# GroupProject
-<<<<<<< HEAD
-<<<<<<< HEAD
+# Eventide
 
-See if things changed.
+# About Eventide
+Eventide! We know planning an evening out can be stressful or time-consuming. Find your events and eats with ease! This application finds events in cities across the globe and restaurants nearby. 
 
-=======
-Sam's test branch
->>>>>>> 6a5b0f380800739f1a2f57a58081b65b03834250
-=======
+# How it works!
+Input your city and date, and events will populate below. Click on the event link to buy tickets and get additional information. Click the Nearby Restaurants button to show restaurants close by. Click on the link to check out the menu or book a reservation. 
 
-# About this project
->>>>>>> d1e2111c394e1bc760ede8320fc99c452d1fc493
+# Do you like the app or want to provide feedback?
+Use the form below to give us some love or provide some feedback to make the application better.
+
+# Errors?
+Notice an error? Let us know! Email us at errors@eventide.com.
+
+Plan. Eat. Peace.
+--- the Eventide Team ---
