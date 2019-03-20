@@ -10,7 +10,7 @@ Input your city and date, and events will populate below. Click on the event lin
 Use the form below to give us some love or provide some feedback to make the application better.
 
 # Errors?
-Notice an error? Let us know! Email us at errors@eventide.com.
+Notice an error? Let us know! Email us at errors@eventideapp.com.
 
-Plan. Eat. Peace.
+Plan. Eat. Peace.<br>
 --- the Eventide Team ---
